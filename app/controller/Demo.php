@@ -1,10 +1,19 @@
 <?php
 namespace app\Controller;
 
+use app\BaseController;
 use think\facade\Db;
-//use think\Db;
 
-class Demo{
+class Demo extends BaseController {
+
+    public function index(){
+        //获取方法名
+        $action = $this->request->action();
+        echo $action;
+        //获取Base的路径
+        $path = $this->app->getBasePath();
+        echo $path;
+    }
 
 
 
